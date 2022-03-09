@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09 مارس 2022 الساعة 16:59
+-- Generation Time: 09 مارس 2022 الساعة 18:09
 -- إصدار الخادم: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -39,13 +39,6 @@ CREATE TABLE `books` (
   `cat_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- إرجاع أو استيراد بيانات الجدول `books`
---
-
-INSERT INTO `books` (`BookID`, `Name`, `Description`, `Price`, `Date`, `quentity`, `image`, `Status`, `cat_id`) VALUES
-(1, 'Fantastic Resort', 'this is the past electronics', '$200', '2022-03-09', '12', '86168_6.jpg', 0, 4);
-
 -- --------------------------------------------------------
 
 --
@@ -63,7 +56,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`ID`, `Name`, `Approve`) VALUES
-(4, 'السياسة', 0);
+(6, 'السياسة', 1),
+(7, 'الطبخ', 0),
+(8, 'الاقتصاد', 0);
 
 --
 -- Indexes for dumped tables
@@ -96,7 +91,7 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- قيود الجداول المحفوظة
